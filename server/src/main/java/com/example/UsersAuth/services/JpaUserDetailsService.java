@@ -1,4 +1,4 @@
-package com.example.UsersApp.services;
+package com.example.UsersAuth.services;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;

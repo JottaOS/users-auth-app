@@ -1,7 +1,7 @@
-package com.example.UsersApp.controllers;
+package com.example.UsersAuth.controllers;
 
-import com.example.UsersApp.models.entity.User;
-import com.example.UsersApp.services.UserService;
+import com.example.UsersAuth.models.entity.User;
+import com.example.UsersAuth.services.UserService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

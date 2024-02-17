@@ -1,4 +1,4 @@
-package com.example.UsersApp.auth.filters;
+package com.example.UsersAuth.auth.filters;
 
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;

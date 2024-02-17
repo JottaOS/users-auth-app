@@ -1,4 +1,4 @@
-package com.example.UsersApp.auth;
+package com.example.UsersAuth.auth;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;

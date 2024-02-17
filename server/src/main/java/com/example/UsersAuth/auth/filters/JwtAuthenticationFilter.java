@@ -1,6 +1,6 @@
-package com.example.UsersApp.auth.filters;
+package com.example.UsersAuth.auth.filters;
 
-import com.example.UsersApp.models.entity.User;
+import com.example.UsersAuth.models.entity.User;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;

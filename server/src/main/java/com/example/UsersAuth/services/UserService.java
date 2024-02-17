@@ -1,6 +1,6 @@
-package com.example.UsersApp.services;
+package com.example.UsersAuth.services;
 
-import com.example.UsersApp.models.entity.User;
+import com.example.UsersAuth.models.entity.User;
 
 import java.util.List;
 import java.util.Optional;

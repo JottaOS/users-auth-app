@@ -1,4 +1,4 @@
-package com.example.UsersApp.models.entity;
+package com.example.UsersAuth.models.entity;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;

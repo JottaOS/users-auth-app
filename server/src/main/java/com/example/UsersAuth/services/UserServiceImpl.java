@@ -1,7 +1,7 @@
-package com.example.UsersApp.services;
+package com.example.UsersAuth.services;
 
-import com.example.UsersApp.models.entity.User;
-import com.example.UsersApp.repositories.UserRepository;
+import com.example.UsersAuth.models.entity.User;
+import com.example.UsersAuth.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
