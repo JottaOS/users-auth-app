@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 export const UserRow = ({
   id,
   username,
@@ -33,4 +35,13 @@ export const UserRow = ({
       </td>
     </tr>
   );
+};
+
+UserRow.propTypes = {
+  id: PropTypes.string.isRequired,
+  username: PropTypes.string.isRequired,
+  email: PropTypes.string.isRequired,
+  password: PropTypes.string.isRequired,
+  handleRemoveUser: PropTypes.func.isRequired,
+  handleSelectedUserForm: PropTypes.func.isRequired,
 };

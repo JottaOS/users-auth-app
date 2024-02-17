@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import PropTypes from "prop-types";
 
 export const UserForm = ({ initialUserForm, handleAddUser, selectedUser }) => {
   const [userForm, setUserForm] = useState(initialUserForm);
@@ -18,7 +19,7 @@ export const UserForm = ({ initialUserForm, handleAddUser, selectedUser }) => {
     event.preventDefault();
 
     if (!username || !password || !email) {
-      alert("Debe completar todos los campos");
+      alert("All fields must be filled");
       return;
     }
     handleAddUser(userForm);
@@ -54,4 +55,10 @@ export const UserForm = ({ initialUserForm, handleAddUser, selectedUser }) => {
       </button>
     </form>
   );
+};
+
+UserForm.propTypes = {
+  initialUserForm: PropTypes.object.isRequired,
+  handleAddUser: PropTypes.func.isRequired,
+  selectedUser: PropTypes.object.isRequired,
 };

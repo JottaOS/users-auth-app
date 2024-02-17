@@ -71,7 +71,7 @@ export const UsersApp = () => {
           <div className="col">
             {users.length === 0 ? (
               <div className="alert alert-warning">
-                No hay usuarios en el sistema
+                There are no users registered.
               </div>
             ) : (
               <UserList

@@ -1,16 +1,20 @@
+import * as types from '../constants/userConstants.js';
+
 export const usersReducer = (state = [], action) => {
   switch (action.type) {
-    case 'addUser':
+    case types.ADD_USER:
       return [
         ...state,
         {
           ...action.payload,
-          id: new Date().getTime()
+          id: String(new Date().getTime())
         }
       ]
-    case 'removeUser':
+
+    case types.REMOVE_USER:
       return state.filter(user => user.id !== action.payload)
-    case 'updateUser':
+
+    case types.UPDATE_USER:
       return state.map(user => {
         if(user.id === action.payload.id){
           return {
@@ -19,6 +23,7 @@ export const usersReducer = (state = [], action) => {
         }
         return user;
       })
+      
     default:
       return state
   }
