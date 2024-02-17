@@ -19,7 +19,7 @@ export const UserRow = ({
             handleSelectedUserForm({ id, username, email, password })
           }
         >
-          UPDATE
+          Update
         </button>
       </td>
       <td>
@@ -28,7 +28,7 @@ export const UserRow = ({
           className="btn btn-danger btn-sm"
           onClick={() => handleRemoveUser(id)}
         >
-          REMOVE
+          Remove
         </button>
       </td>
     </tr>

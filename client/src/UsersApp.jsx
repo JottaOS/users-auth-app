@@ -2,6 +2,7 @@ import { useReducer, useState } from "react";
 import { UserForm } from "./components/UserForm";
 import { UserList } from "./components/UserList";
 import { usersReducer } from "./reducers/usersReducer";
+import * as types from "./constants/userConstants.js";
 
 const initialUsers = [
   {
@@ -19,6 +20,7 @@ const initialUsers = [
 ];
 
 const initialUserForm = {
+  id: "",
   username: "",
   password: "",
   email: "",
@@ -29,15 +31,23 @@ export const UsersApp = () => {
   const [selectedUser, setSelectedUser] = useState(initialUserForm);
 
   const handleAddUser = (user) => {
+    if (user.id) {
+      dispatch({
+        type: types.UPDATE_USER,
+        payload: user,
+      });
+      return;
+    }
+
     dispatch({
-      type: "addUser",
+      type: types.ADD_USER,
       payload: user,
     });
   };
 
   const handleRemoveUser = (id) => {
     dispatch({
-      type: "removeUser",
+      type: types.REMOVE_USER,
       payload: id,
     });
   };

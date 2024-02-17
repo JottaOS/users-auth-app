@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 export const UserForm = ({ initialUserForm, handleAddUser, selectedUser }) => {
   const [userForm, setUserForm] = useState(initialUserForm);
 
-  const { username, password, email } = userForm;
+  const { id, username, password, email } = userForm;
 
   useEffect(() => {
     setUserForm({ ...selectedUser });
@@ -50,7 +50,7 @@ export const UserForm = ({ initialUserForm, handleAddUser, selectedUser }) => {
         onChange={onInputChange}
       />
       <button className="btn btn-primary" type="submit">
-        Create
+        {!id ? "Create" : "Update"}
       </button>
     </form>
   );
