@@ -4,7 +4,6 @@ export const UserRow = ({
   id,
   username,
   email,
-  password,
   handleRemoveUser,
   handleSelectedUserForm,
 }) => {
@@ -17,9 +16,7 @@ export const UserRow = ({
         <button
           type="button"
           className="btn btn-secondary btn-sm"
-          onClick={() =>
-            handleSelectedUserForm({ id, username, email, password })
-          }
+          onClick={() => handleSelectedUserForm({ id, username, email })}
         >
           Update
         </button>
@@ -38,10 +35,9 @@ export const UserRow = ({
 };
 
 UserRow.propTypes = {
-  id: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired,
   username: PropTypes.string.isRequired,
   email: PropTypes.string.isRequired,
-  password: PropTypes.string.isRequired,
   handleRemoveUser: PropTypes.func.isRequired,
   handleSelectedUserForm: PropTypes.func.isRequired,
 };

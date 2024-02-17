@@ -18,7 +18,7 @@ export const UserForm = ({ initialUserForm, handleAddUser, selectedUser }) => {
   const onSubmit = (event) => {
     event.preventDefault();
 
-    if (!username || !password || !email) {
+    if (!username || (!password && !id) || !email) {
       alert("All fields must be filled");
       return;
     }
@@ -35,14 +35,16 @@ export const UserForm = ({ initialUserForm, handleAddUser, selectedUser }) => {
         value={username}
         onChange={onInputChange}
       />
-      <input
-        className="form-control my-3 w-75"
-        placeholder="Password"
-        type="password"
-        name="password"
-        value={password}
-        onChange={onInputChange}
-      />
+      {!id && (
+        <input
+          className="form-control my-3 w-75"
+          placeholder="Password"
+          type="password"
+          name="password"
+          value={password}
+          onChange={onInputChange}
+        />
+      )}
       <input
         className="form-control my-3 w-75"
         placeholder="Email"

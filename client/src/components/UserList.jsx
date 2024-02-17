@@ -20,13 +20,12 @@ export const UserList = ({
         </thead>
         <tbody>
           {users.length ? (
-            users.map(({ id, username, email, password }) => (
+            users.map(({ id, username, email }) => (
               <UserRow
                 key={id}
                 id={id}
                 username={username}
                 email={email}
-                password={password}
                 handleRemoveUser={handleRemoveUser}
                 handleSelectedUserForm={handleSelectedUserForm}
               />

@@ -20,7 +20,7 @@ const initialUsers = [
 ];
 
 const initialUserForm = {
-  id: "",
+  id: 0,
   username: "",
   password: "",
   email: "",
@@ -31,16 +31,9 @@ export const UsersApp = () => {
   const [selectedUser, setSelectedUser] = useState(initialUserForm);
 
   const handleAddUser = (user) => {
-    if (user.id) {
-      dispatch({
-        type: types.UPDATE_USER,
-        payload: user,
-      });
-      return;
-    }
-
+    const type = user.id ? types.UPDATE_USER : types.ADD_USER;
     dispatch({
-      type: types.ADD_USER,
+      type,
       payload: user,
     });
   };
